@@ -4,11 +4,12 @@ import org.hibernate.annotations.Immutable;
 import org.java_websocket.WebSocket;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "users")
 @Immutable
-public class User {
+public class User implements Serializable {
 
 
     @Id

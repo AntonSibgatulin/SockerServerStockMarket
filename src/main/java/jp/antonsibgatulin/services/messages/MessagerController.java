@@ -8,8 +8,6 @@ import jp.antonsibgatulin.services.Service;
 import org.java_websocket.WebSocket;
 import org.json.JSONObject;
 
-import java.util.List;
-
 public class MessagerController extends Service {
 
 
@@ -19,6 +17,11 @@ public class MessagerController extends Service {
 
     @Override
     public void execute(WebSocket webSocket, String json) {
+
+    }
+
+    @Override
+    public void executeCommand(WebSocket webSocket, String[] arr) {
 
     }
 
@@ -40,7 +43,7 @@ public class MessagerController extends Service {
     }
 
     @Override
-    public void executeCommand(WebSocket webSocket, String[] arr) {
+    public void executeCommand(User user, String[] arr) {
 
     }
 }

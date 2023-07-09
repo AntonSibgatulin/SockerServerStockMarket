@@ -1,10 +1,13 @@
 package jp.antonsibgatulin.messager.message;
 
 import jp.antonsibgatulin.messager.user.User;
+import org.hibernate.annotations.Immutable;
 
 import javax.persistence.*;
 
 @Entity
+@Immutable
+@Table(name = "dilogue")
 public class Dilog {
 
     @Id
@@ -21,9 +24,12 @@ public class Dilog {
     private User user_2;
 
 
+    private String name;
+
     public Dilog(){
 
     }
+
 
     public Long getId() {
         return id;

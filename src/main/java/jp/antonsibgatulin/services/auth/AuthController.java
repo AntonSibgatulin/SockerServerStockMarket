@@ -2,6 +2,7 @@ package jp.antonsibgatulin.services.auth;
 
 import jp.antonsibgatulin.database.DatabaseModule;
 import jp.antonsibgatulin.main.Server;
+import jp.antonsibgatulin.messager.user.User;
 import jp.antonsibgatulin.services.Service;
 import netscape.javascript.JSObject;
 import org.java_websocket.WebSocket;
@@ -40,6 +41,11 @@ public class AuthController extends Service {
 
     @Override
     public void executeCommand(WebSocket webSocket, String[] arr) {
+
+    }
+
+    @Override
+    public void executeCommand(User user, String[] arr) {
 
     }
 }

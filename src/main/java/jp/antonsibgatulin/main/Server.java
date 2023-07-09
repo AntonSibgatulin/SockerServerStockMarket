@@ -93,8 +93,10 @@ public class Server extends WebSocketServer {
                 if (json != null) {
                     messagerController.execute(user, json);
                 } else {
-                    messagerController.executeCommand(webSocket, arr);
+                    messagerController.executeCommand(user, arr);
                 }
+            }else if (message_socket_type == EMessageSocket.GET_DIALOGUES){
+                messagerController.executeCommand(user,arr);
             }
 
         }
